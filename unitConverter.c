@@ -9,7 +9,7 @@ float currencyConverter(char*, char*, float);
 
 int Main(void){
     float number;
-    char convertVariable[20] = "";
+    char convertVariable[20];
     char startingUnit[20];
     char goalUnit[20];
 
