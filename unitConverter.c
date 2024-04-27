@@ -4,6 +4,7 @@
 float weightConverter(char*, char*, float);
 float tempConverter(char*, char*, float);
 float currencyConverter(char*, char*, float);
+float distanceConverter(char*, char*, float);
 
 
 
@@ -13,7 +14,7 @@ int Main(void){
     char startingUnit[20];
     char goalUnit[20];
 
-    printf("What do you want to convert? Type in weight, temperature or currency: ");
+    printf("What do you want to convert? Type in weight, temperature, distance or currency: ");
     scanf("%s\n",tolower(&convertVariable));
 
     if (convertVariable == "weight")
@@ -34,6 +35,13 @@ int Main(void){
         scanf("%s %s %f", &startingUnit, &goalUnit, &number);
         currencyConverter(&startingUnit, &goalUnit, number);
     }
+    else if (convertVariable == "distance")
+    {
+        printf("Input the unit you want to conver, then your goal unit and lastly the number");
+        scanf("%s %s %f", &startingUnit, &goalUnit, &number);
+        distanceConverter(&startingUnit, &goalUnit, number);
+    }
+    
     else{
         return 0;
         //printf("Not a valid input, please input weight, temperatur or currency: ");
@@ -46,3 +54,8 @@ float weightConverter(char* startingUnit, char* goalUnit, float number){}
 float tempConverter(char* startingUnit, char* goalUnit, float number){}
 
 float currencyConverter(char* startingUnit, char* goalUnit, float number){}
+
+float distanceConverter(char* startingUnit, char* goalUnit, float number){
+    float ftFactor = 3.281;
+    
+}
